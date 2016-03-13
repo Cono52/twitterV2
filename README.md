@@ -16,3 +16,7 @@ Heroku url: http://twitterv2.herokuapp.com/
 
 3. Open a web browser and go to "localhost:3000".
 
+4. Remember db will be empty so make a few accounts in the app. The live app will be more full so make an account 
+   and follow ohters to see feed.
+
+
