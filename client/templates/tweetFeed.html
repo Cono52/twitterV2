@@ -1,12 +1,13 @@
-<template name="tweetFeed">  
+<template name="tweetFeed">
   <div class="tweetfeed-container">
     <div class="panel panel-default tweetfeed">
       <div class="panel-body">
+        {{#if currentUser}}
         <!-- Text box for tweet content -->
         {{#each tweetMessage}}
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">@{{this.user}} 
+              <h3 class="panel-title">@{{this.user}}
                 <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
                  {{this.timestamp}}
                </h3>
@@ -16,7 +17,8 @@
             </div>
           </div>
         {{/each}}
+        {{/if}}
       </div>
     </div>
   </div>
-</template>  
+</template>

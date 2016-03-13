@@ -1,4 +1,4 @@
-Template.followUsers.helpers({  
+Template.followUsers.helpers({
   'foundUser': function() {
     return Session.get('foundUser');
   },
@@ -21,8 +21,8 @@ Template.followUsers.helpers({
   }
 });
 
-Template.followUsers.events({  
 
+Template.followUsers.events({
   'submit form': function(event) {
     var searchUser = event.target.searchUser.value;
 
@@ -39,14 +39,11 @@ Template.followUsers.events({
   'click #followRec': function(event) {
     Meteor.call('followUser', this.username);
   }
-
 });
 
-Template.followUsers.onCreated(function() {  
+Template.followUsers.onCreated(function() {
   if (Meteor.user()) {
-    this.subscribe('users', Meteor.user().username);
+    this.subscribe('users', Meteor.user().username)
     this.subscribe('followings', Meteor.user().username);
   }
 });
-
-

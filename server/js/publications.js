@@ -1,4 +1,4 @@
-Meteor.publishComposite('tweets', function(username) {  
+Meteor.publishComposite('tweets', function(username) {
   return {
     find: function() {
       // Find the current user's following users
@@ -10,7 +10,7 @@ Meteor.publishComposite('tweets', function(username) {
         return Tweets.find({user: relationship.following});
       }
     }]
-  };
+  }
 });
 
 Meteor.publish('ownTweets', function(username) {

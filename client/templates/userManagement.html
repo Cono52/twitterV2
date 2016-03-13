@@ -1,13 +1,13 @@
-<template name="userManagement">  
+<template name="userManagement">
   <div class="user-container">
     <div class="panel panel-default userBox">
       <div class="panel-body">
         {{# if currentUser}}
         <!-- Message for logged in user -->
-        <p>Hello <strong>@{{currentUser.username}}</strong>, welcome to twitterV2</p>
-        <button type="button" class="btn btn-info fullbutton" id="logout">Log out</button> 
+        <p>Hello <strong>@{{currentUser.username}}</strong>, welcome to twitterClone</p>
+        <button type="button" class="btn btn-info fullbutton" id="logout">Log out</button>
 
-        <table class="table">  
+        <table class="table">
           <tr>
             <td class="tableHeader">Tweets</td>
             <td class="tableHeader">Following</td>
